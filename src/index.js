@@ -1,4 +1,3 @@
-require('./styles.scss');
 
 class Car {
 	constructor(car) {
