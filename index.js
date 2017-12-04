@@ -1,3 +1,5 @@
+require('./styles.scss');
+
 class Car {
 	constructor(car) {
 		document.write(`I have a ${car}`);
