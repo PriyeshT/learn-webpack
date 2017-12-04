@@ -27,7 +27,6 @@ let config = {
 	},
 	plugins: [
 		new ExtractTextWebpackPlugin('styles.css'),
-		new webpack.optimize.UglifyJsPlugin()
 	],
 	devServer: {
 		contentBase: path.resolve(__dirname, './build'),
@@ -39,3 +38,9 @@ let config = {
 }
 
 module.exports = config;
+
+if(process.env.NODE_ENV === 'production') {
+	module.exports.plugins.push(
+		new webpack.optimize.UglifyJsPlugin()
+	)
+}
